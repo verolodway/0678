@@ -86,21 +86,21 @@ public class Flota
                 datos[0] = id;
                 datos[1] = vehiculos.get(id).getAntiguedad();
                 datos[2] = vehiculos.get(id).getKilometraje();
-                datos[3] = vehiculos.get(id).getNumeroDePlazas();
-                datos[4] = vehiculos.get(id).pasaRevision();
+                datos[3] =((Coche)vehiculos.get(id)).getNumeroDePlazas();
+                datos[4] = ((Coche)vehiculos.get(id)).pasaRevision();
             }
             datos = new int[4];
             datos[0] = id;
             datos[1] = vehiculos.get(id).getAntiguedad();
             datos[2] = vehiculos.get(id).getKilometraje();
-            datos[3] = vehiculos.get(id).getNumeroDePlazas();
+            datos[3] = ((Coche)vehiculos.get(id)).getNumeroDePlazas();
         }
         else{
             datos = new int[4];
             datos[0] = id;
             datos[1] = vehiculos.get(id).getAntiguedad();
             datos[2] = vehiculos.get(id).getKilometraje();
-            datos[3] = vehiculos.get(id).getPeso();
+            datos[3] = ((Camion)vehiculos.get(id)).getPeso();
         }
         return datos;
     }
